@@ -1,0 +1,13 @@
+euclidean<-function(x,y){
+  x<-abs(x)
+  y<-abs(y)
+  repeat{
+    z<-max(x,y)%%min(x,y)
+    if(z==0){
+      break
+    }else{
+        x<-min(x,y)
+        y<-z}
+  }
+  return(x)
+}
