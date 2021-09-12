@@ -2,7 +2,7 @@
 % Please edit documentation in R/dijkstra.R
 \name{dijkstra}
 \alias{dijkstra}
-\title{dijkstra algorithms}
+\title{dijkstra algorithm}
 \usage{
 dijkstra(graph, init_node)
 }
@@ -15,25 +15,13 @@ dijkstra(graph, init_node)
 the shortest path to every other node from the starting node as a vector.
 }
 \description{
-Let the starting nodebe be called the initial node. Let the
-distance of node Y be the distance from the initial node to Y. Dijkstra's
-algorithm will initially start with infinite distances and will try to improve
-them step by step.Mark all nodes unvisited. Create a set of all the unvisited
-nodes called the unvisited set. Assign to every node a tentative distance
-value: set it to zero for initial node and to infinity for all other
-nodes. Set the initial node as current.For the current node, consider all of
-its unvisited neighbours and calculate their tentative distances through the
-current node. Compare the newly calculated tentative distance to the current
-assigned value and assign the smaller one. When we are done considering all of
-the unvisited neighbours of the current node, mark the current node as visited
-and remove it from the unvisited set. A visited node will never be checked
-again.If the destination node has been marked visited (when planning a route
-between two specific nodes) or if the smallest tentative distance among the
-nodes in the unvisited set is infinity (when planning a complete traversal;
-occurs when there is no connection between the initial node and remaining
-unvisited nodes), then stop. The algorithm has finished. Otherwise, select the
-unvisited node that is marked with the smallest tentative distance, set it as
-the new "current node", and go back to step 3.
+This function uses dijkstra algorithms to find the shortest distance between
+two nodes in a graph. Starting from the init_node,the algorithm creates two
+sets for invisited nodes and visited nodes.To every node,set zero to init_node
+and infinity to other nodes. For the current node,calculate the distance to
+its neighbors and compare with the known distances,assign the shortest.Once
+after finding the shortest distance to a node,divide the node into visited set
+and set a new init_node.Reverse the step until all nodes are visited.
 }
 \examples{
 dijkstra(wiki_graph,3)
