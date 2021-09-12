@@ -24,5 +24,5 @@ euclidean<-function(x,y){
         x<-min(x,y)
         y<-z}
   }
-  return(x)
+  return(min(x,y))
 }
