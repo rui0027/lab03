@@ -33,12 +33,12 @@ dijkstra <- function(graph, init_node) {
   for (i in 1:nrow(graph)) {
     m[graph[i, 1], graph[i, 2]] = graph[i, 3]
   }
-  # node to itself distance = 0
+  # original distance = 0
   for (i in 1:nrow(m)) {
     m[i, i] = 0
   }
   for (j in 2:nrow(m)) {
-    # keep sort, always starts from the next minimum num
+   # keep sort, always starts from the next minimum num
     v = sort(m[init_node, ])
     a = v[j]
     for (i in 1:nrow(m)) {
