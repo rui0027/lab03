@@ -2,7 +2,7 @@ Package: lab03
 Type: Package
 Title: Dijkstra and Euclidean
 Version: 0.1.0
-Author: Hong Zhang,Bing Rui Yao
+Author: Hong Zhang(liuid:honzh073),Bing Rui Yao(liuid:binya518)
 Maintainer: Bing Rui Yao<bryleeyao@gmail.com>
 Description: This R package is to implement 
     two famous algorithms, the Euclidian algorithm 
